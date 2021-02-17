@@ -38,7 +38,7 @@ resource "local_file" "unik_public_key" {
 
 resource "metal_device" "unik" {
   hostname         = "unik-qemu-node"
-  plan             = "t1.small.x86"
+  plan             = var.metal_plan
   facilities       = ["ewr1"]
   operating_system = "ubuntu_20_04"
   billing_cycle    = "hourly"

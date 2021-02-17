@@ -21,6 +21,6 @@ providers:
 EOF
 
 unik target --host localhost && \
-ln -s /usr/bin/qemu-system-x86_64 /usr/local/bin/qemu && \
+ln -s /usr/bin/qemu-system-$(echo `arch`) /usr/local/bin/qemu && \
 which qemu && \
 cat /root/daemon-config.yaml
